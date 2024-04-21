@@ -2,7 +2,7 @@ Add-Type -AssemblyName PresentationFramework
 Add-Type -AssemblyName System.Windows.Forms
 
 $f = New-Object Windows.Forms.Form
-$f.Text = "Download e Execução"
+$f.Text = "Download Python"
 $f.Size = New-Object Drawing.Size(400,150)
 $f.StartPosition = "CenterScreen"
 
